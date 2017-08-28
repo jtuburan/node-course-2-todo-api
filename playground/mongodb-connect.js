@@ -1,5 +1,4 @@
 // const MongoClient = require('mongodb').MongoClient;
-
 const {MongoClient, ObjectID} = require('mongodb');
 
 
@@ -10,9 +9,10 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err,db) =>{
     console.log('Connected to mongo server');
   }
 
-  // db.collection('Todos').insertOne({
-  //   text: 'something to do',
-  //   completed: false
+  // db.collection('NewUser').insertOne({
+  //   name: 'Dolph',
+  //   age: 26,
+  //   location: 'sabang'
   // },(err,result) => {
   //   if(err){
   //     return console.log('unable to insert todo', err);
