@@ -6,6 +6,7 @@ var {Todo} = require('./models/todo.js');
 var {User} = require('./models/user.js');
 
 var app = express();
+const port = process.enc.PORT || 3000;
 
 app.use(bodyParser.json());
 app.post('/todos', (req,res) => {
@@ -28,8 +29,7 @@ app.get('/todos', (req,res) => {
 });
 // GET /todos/12341234
 app.get('/todos/:id', (req,res) => {
-   var id = req.params.id;
-   
+   var id = req.params.id;   
    // validate obj ID
    if(!ObjectID(id)){
        return res.send(404).send();
@@ -45,8 +45,8 @@ app.get('/todos/:id', (req,res) => {
 });
 
 
-app.listen(3000,() => {
-    console.log("started in port 3000");
+app.listen(port,() => {
+    console.log("started in port $(port)");
 });
 
 module.exports = {app};
