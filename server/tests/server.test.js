@@ -106,9 +106,6 @@ describe('POST /todos',() => {
                 .end(done);
         });
 
-        // it('should return 404 if onject id is invalid', () =>{
-
-        // });
     });
     
 });
