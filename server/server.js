@@ -1,5 +1,5 @@
+require('./config/config.js');
 const _ = require('lodash');
-
 var express = require('express');
 var bodyParser = require('body-parser');
 var {ObjectID} = require('mongodb');
@@ -61,7 +61,7 @@ app.delete('/todos/:id',(req,res) => {
         res.status(400).send();
     });
 });
-
+ 
 app.patch('/todos/:id',(req, res) => {
     var id = req.params.id;
     var body = _.pick(req.body,['text','completed']);
